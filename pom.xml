@@ -36,7 +36,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>l_lau_u.calculator_javafx.App</mainClass>
+                    <mainClass>l_lau_u.calculator_javafx/l_lau_u.calculator_javafx.App</mainClass>
                 </configuration>
                 <executions>
                     <execution>

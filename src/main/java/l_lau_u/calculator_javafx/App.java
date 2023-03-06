@@ -17,8 +17,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        Parent root = loadFXML("calculatorform");
+        scene = new Scene(root, 335, 600);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -27,7 +29,7 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/forms/calculatorform.fxml"));
         return fxmlLoader.load();
     }
 
