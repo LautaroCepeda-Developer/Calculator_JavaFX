@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculatorformcontroller">
    <children>
       <Pane layoutY="12.0" prefHeight="600.0" prefWidth="335.0" style="-fx-background-color: #060606;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <GridPane hgap="10.0" layoutX="10.0" layoutY="10.0" prefHeight="476.0" prefWidth="335.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="180.0">
@@ -33,7 +32,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <children>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="DEL" textFill="#00ffa9">
+            <Button id="del_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_DEL_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="DEL" textFill="#00ffa9">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -41,7 +40,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="AC" textFill="#00ffa9" GridPane.columnIndex="1">
+            <Button id="ac_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_AC_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="AC" textFill="#00ffa9" GridPane.columnIndex="1">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -49,7 +48,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="\%" textFill="#00ffa9" GridPane.columnIndex="2">
+            <Button id="percentage_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_Percentage_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="\%" textFill="#00ffa9" GridPane.columnIndex="2">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -57,7 +56,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="÷" textFill="RED" GridPane.columnIndex="3">
+            <Button id="divide_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_Divide_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="÷" textFill="RED" GridPane.columnIndex="3">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -65,7 +64,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="7" textFill="WHITE" GridPane.rowIndex="1">
+            <Button id="num7_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_num7_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="7" textFill="WHITE" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -73,7 +72,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button id="num8_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_num8_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -81,7 +80,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button id="num9_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_num9_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -89,7 +88,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="×" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button id="multiply_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_Multiply_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="×" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -97,7 +96,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="4" textFill="WHITE" GridPane.rowIndex="2">
+            <Button id="num4_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_num4_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="4" textFill="WHITE" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -105,7 +104,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button id="num5_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_num5_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -113,7 +112,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button id="num6_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_num6_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -121,7 +120,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="–" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button id="subtract_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_Subtract_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="–" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -129,7 +128,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="1" textFill="WHITE" GridPane.rowIndex="3">
+            <Button id="num1_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_num1_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="1" textFill="WHITE" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -137,7 +136,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button id="num2_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_num2_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -145,7 +144,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button id="num3_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_num3_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -153,7 +152,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="+" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button id="sum_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_Sum_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="+" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -161,7 +160,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="±" textFill="WHITE" GridPane.rowIndex="4">
+            <Button id="sign_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_Sign_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="±" textFill="WHITE" GridPane.rowIndex="4">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -169,7 +168,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button id="num0_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_num0_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -177,7 +176,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="," textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Button id="comma_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_Comma_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="," textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -185,7 +184,7 @@
                   <Glow level="0.1" />
                </effect>
             </Button>
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="=" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Button id="equal_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#OnClick_Equal_btn" prefHeight="70.0" prefWidth="70.0" style="-fx-background-radius: 10px; -fx-background-color: #0f0f0f;" text="=" textFill="RED" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -195,7 +194,7 @@
             </Button>
          </children>
       </GridPane>
-      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="300.0" style="-fx-text-fill: #ffffff;" text="400+400 = uwu" textAlignment="RIGHT" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="435.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="130.0">
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="300.0" style="-fx-text-fill: #ffffff;" text="400+400 = uwu" textAlignment="RIGHT" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="435.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="130.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
